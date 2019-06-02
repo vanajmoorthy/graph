@@ -1,6 +1,5 @@
 // const math = require('mathjs');
-
-var totalSize = 50;
+var originalSize = 50;
 var userIn = "sin(5)";
 var res;
 var inp;
@@ -19,11 +18,11 @@ function draw() {
 	stroke(0);
 	strokeWeight(1);
 
-	let negWidth = -width - 2;
-	let posWidth = width / 2;
+	var negWidth = -width - 2;
+	var posWidth = width / 2;
 
-	let negHeight = -height / 2;
-	let posHeight = height / 2;
+	var negHeight = -height / 2;
+	var posHeight = height / 2;
 
 	line(negWidth, 0, posWidth, 0);
 
@@ -32,13 +31,13 @@ function draw() {
 
 
 	for (let i = negWidth; i < posWidth; i++) {
-		if (parseInt(i / totalSize) === i / totalSize) {
+		if (parseInt(i / originalSize) === i / originalSize) {
 			line(i, 5, i, -5);
 		}
 	}
 
 	for (let j = negHeight; j < posHeight; j++) {
-		if (parseInt(j / totalSize) === j / totalSize) {
+		if (parseInt(j / originalSize) === j / originalSize) {
 			line(5, j, -5, j);
 		}
 	}
@@ -48,7 +47,7 @@ function draw() {
 	// COME BACK TO THIS LATER, NUMBERS TO THE AXES
 
 	// for (let i = -width / 2; i < width / 2; i++) {
-	// 	if (parseInt(i / totalSize) === i / totalSize) {
+	// 	if (parseInt(i / originalSize) === i / originalSize) {
 	//         // rotateZ(0);
 	// 		text(-i, i, 0);
 	// 	}
@@ -62,8 +61,8 @@ function plotFn(f, color) {
 	stroke(color);
 	strokeWeight(2);
 
-	for (let i = -width / 2; i < width / 2; i += 0.1) {
-		out = f(i / totalSize) * totalSize;
+	for (let i = negWidth; i < posWidth; i += 0.1) {
+		out = f(i / originalSize) * originalSize;
 		point(i, out);
 	}
 }
@@ -73,7 +72,7 @@ function updateFn() {
 }
 
 function updateSc() {
-	totalSize = parseFloat(document.getElementById("inputSc").value);
+	originalSize = parseFloat(document.getElementById("inputSc").value);
 }
 
 function f(x) {

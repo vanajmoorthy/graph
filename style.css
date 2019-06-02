@@ -1,0 +1,44 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+
+	padding: 0;
+	/* background-color: rgb(51, 51, 51); */
+
+	margin: 0;
+	display: flex;
+
+	/* This centers our sketch horizontally. */
+	justify-content: center;
+
+	/* This centers our sketch vertically. */
+	align-items: center;
+}
+canvas {
+    border-radius: 25px;
+    margin: 0 auto;
+    box-shadow: 5px 5px #999999;
+}
+
+#inputFn, #inputSc {
+	border-radius: 25px;
+}
+
+p {
+	color: #000000;
+}
+
+button {
+	border-radius: 10px;
+}
+
+#inputNum {
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+	color: white;
+	font-size: 15px;
+}

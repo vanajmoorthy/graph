@@ -78,5 +78,6 @@ function updateSc() {
 
 function f(x) {
 	math.eval(userIn);
-	return math.eval(userIn);
+	// console.log(x);
+	return math.eval(userIn, {x});
 }

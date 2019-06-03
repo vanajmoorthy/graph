@@ -1,6 +1,5 @@
-// const math = require('mathjs');
 var originalSize = 50;
-var userIn = "sin(5)";
+var userIn = "sin(x)";
 var res;
 var inp;
 
@@ -9,10 +8,12 @@ function setup() {
 	canvas.parent("sketch-div");
 	angleMode(DEGREES);
 }
+
 function draw() {
 	background(245);
 	fill(0);
 	translate(width / 2, height / 2);
+
 	scale(1.0, -1.0);
 
 	stroke(0);
@@ -61,7 +62,7 @@ function plotFn(f, color) {
 	stroke(color);
 	strokeWeight(2);
 
-	for (let i = negWidth; i < posWidth; i += 0.1) {
+	for (let i = -width / 2; i < width / 2; i += 0.1) {
 		out = f(i / originalSize) * originalSize;
 		point(i, out);
 	}
@@ -76,7 +77,6 @@ function updateSc() {
 }
 
 function f(x) {
-	math.eval(userIn);
 	// console.log(x);
 	return math.eval(userIn, {x});
 }

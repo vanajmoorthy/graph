@@ -3,8 +3,8 @@ var userIn = "sin(x)";
 var res;
 var inp;
 
-const mathjs = require("mathjs");
-// require("p5");
+// const mathjs = require("mathjs");
+// const p5 = require("p5");
 
 function setup() {
 	var canvas = createCanvas(600, 600);

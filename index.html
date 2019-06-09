@@ -9,16 +9,18 @@
     <script src="src/plot.js"></script>
     <script src="src/math.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hjk6uuj.css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.55">
 
 </head>
 
 <body>
     <div id="sketch-div"></div>
     <div id="inputNum">
-        <p>Function: <input id="inputFn" onsubmit="updateFn()">
-            <button onclick="updateFn()">Enter</button></p>
+        <p>Function (x): <input id="inputFn" onsubmit="updateFn()">
+            <button id="updateF" onclick="updateFn()">Enter</button></p>
         <p>Enter scale: <input id="inputSc" onsubmit="updateSc()">
-            <button onclick="updateSc()">Enter</button></p>
+            <button id="updateS" onclick="updateSc()">Enter</button></p>
     </div>
 </body>
 

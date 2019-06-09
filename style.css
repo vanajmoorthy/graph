@@ -1,6 +1,9 @@
 html,
 body {
 	height: 100%;
+	font-family: "europa";
+	font-style: normal;
+	font-weight: 500;
 }
 
 body {
@@ -24,21 +27,44 @@ canvas {
 }
 
 #inputFn, #inputSc {
-	border-radius: 25px;
+	padding: 3px;
+	border-radius: 8px;
+	border: 1px solid #d3d3d3;
+}
+
+#sketch-div {
+	display: block;
 }
 
 p {
 	color: #000000;
+	display: inline;
 }
 
 button {
-	border-radius: 10px;
+	padding: 4px 9px 4px 9px;
+	border-radius: 9px;
+	border: 1px solid #d3d3d3;
+	background-color: #1da7ea;
+	color: white;
+	font-family: "europa";
+	font-style: normal;
+	font-weight: 500;
 }
 
 #inputNum {
-	position: fixed;
-	bottom: 30px;
-	left: 30px;
+	position: absolute;
+	bottom: 18px;
+	/* left: 30px; */
+	padding-left: 10px;
+	margin: auto;
 	color: white;
 	font-size: 15px;
+	display: block;
+}
+
+@media only screen and (max-width: 800px) {
+	#inputNum {
+		bottom: 240px;
+	}
 }

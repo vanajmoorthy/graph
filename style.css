@@ -65,6 +65,13 @@ button {
 
 @media only screen and (max-width: 800px) {
 	#inputNum {
-		bottom: 240px;
+		bottom: 18px;
+	}
+}
+
+@media only screen and (max-width: 619px) {
+	#inputNum {
+		bottom: 0px;
+		width: 340px;
 	}
 }
